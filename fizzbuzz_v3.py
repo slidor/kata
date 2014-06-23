@@ -29,7 +29,7 @@ def main(argv):
          start = int(arg)
       elif opt in ("-e"):
          end = int(arg)     
-   print "\n".join(fizzbuzz(n) for n in xrange(start, end+1))
+   print "\n".join(fizzbuzz(n) for n in range(start, end+1))
 
 if __name__ == "__main__":
    main(sys.argv[1:])
