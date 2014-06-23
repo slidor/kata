@@ -15,7 +15,7 @@ def fizzbuzz(n):
  
 def main(argv):
    start = 1
-   end = 0
+   end = 100
    try:
       opts, args = getopt.getopt(argv,"hs:e:")
    except getopt.GetoptError:
@@ -28,11 +28,7 @@ def main(argv):
       elif opt in ("-s"):
          start = int(arg)
       elif opt in ("-e"):
-         end = int(arg)
-   if end < start:
-   	  print 'end value missing or too small!'
-   	  print 'fizzbuzz.py -s <startvalue> -e <endvalue>'
-   	  sys.exit()      
+         end = int(arg)     
    print "\n".join(fizzbuzz(n) for n in xrange(start, end))
 
 if __name__ == "__main__":
